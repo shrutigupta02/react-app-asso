@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Associationcard from './associationcard'
-import { Link } from "react-router-dom";
 
 export type associations = {
     associations: {
@@ -13,7 +12,7 @@ export type associations = {
 
 
 
-export default class Searchengine extends Component <associations, {}> {
+export default class Searchengine extends React.Component<associations, {}> {
   render() {
     // console.log(this.props)
     return (
@@ -27,7 +26,7 @@ export default class Searchengine extends Component <associations, {}> {
                 </div>
             )
         }
-        {/*  */}
+      
       </div>
     )
   }
