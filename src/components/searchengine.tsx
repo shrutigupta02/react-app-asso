@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 import Associationcard from './associationcard'
+import { Link } from "react-router-dom";
 
 export type associations = {
     associations: {
+      id:number,
       name:string,
       description: string
     }[]
+    handleAssociation: Function
   }
 
 
@@ -17,7 +20,14 @@ export default class Searchengine extends Component <associations, {}> {
         
       <div>
         searchengine
-        <Associationcard association={this.props.associations[0]} />
+        {
+            this.props.associations.map(pres =>
+                <div key={pres.id}>
+                    <Associationcard association={pres} handleAssociation={this.props.handleAssociation}/>
+                </div>
+            )
+        }
+        {/*  */}
       </div>
     )
   }

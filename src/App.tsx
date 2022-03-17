@@ -3,9 +3,6 @@ import './App.css';
 import Homepage from './components/homepage';
 import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 
-
-
-
 function App() {
   return (
     <div className="App">
