@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Converter from '../converter/converter'
 
+
 export type association = {
     association: {
       id: number,
@@ -16,6 +17,7 @@ export default class Donationpage extends React.Component<association, {}>{
   render() {
     return (
       <div> 
+          
           nom : {this.props.association.name} -
           description : {this.props.association.description}
 

@@ -1,6 +1,7 @@
 import React, { Component, useState } from 'react'
 import Associationcard from '../associationcard/associationcard'
 
+
 export type associations = {
   associations: {
     id:number,

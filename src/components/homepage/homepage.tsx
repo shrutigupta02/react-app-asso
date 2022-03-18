@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Searchengine from '../searchengine/searchengine'
 import Donationpage from '../donationpage/donationpage'
+import Nav from '../nav/nav'
 
 
 // define the type of the state
@@ -47,6 +48,7 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
     this.setState(newAssociations)
   }
 
+  // function for quitting the DonationPAge and going back to the homepage
   quitDonationPage = () => {
     let associations = this.state.associations
     let assoSelectedName = this.state.associationSelected.name
@@ -61,7 +63,8 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
     
     if(this.state.associationSelected.id==-1)
       return (
-        <div>homepage
+        <div>
+          <Nav/>
           <Searchengine  associations={this.state.associations} handleAssociation={this.handleAssociation}/>
         </div>  
         
@@ -69,10 +72,10 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
     else {
       return (
         <div>
+          <Nav/>
           <Donationpage association={this.state.associationSelected} handleAssociation={this.handleAssociation} quitPage={this.quitDonationPage} />
         </div>
       )
     }
   }
 }
-// 
