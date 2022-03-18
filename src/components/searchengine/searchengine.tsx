@@ -1,8 +1,6 @@
 import React, { Component, useState } from 'react'
 import Associationcard from '../associationcard/associationcard'
 
-
-
 export type associations = {
   associations: {
     id:number,
@@ -11,7 +9,6 @@ export type associations = {
   }[]
   handleAssociation: Function
 }
-
 
 export default function Searchengine(props: associations) {
   
@@ -35,33 +32,3 @@ export default function Searchengine(props: associations) {
 }
 
 
-
-
-
-    // {id = props.associations[1].id}
-    // {name = props.associations[1].name}
-    // {description = props.associations[1].description}
-
-
-    // 
-
-  {/**/}
-
-        {/* {
-            props.associations.map((pres) => {
-            <div key={pres.id}>
-              <Associationcard association={pres} handleAssociation={props.handleAssociation}/>
-            </div>
-          })
-        } */}  
-
-
-
- /* {
-          this.props.associations.map(pres =>
-            <div key={pres.id}>
-              <Associationcard association={pres} handleAssociation={this.props.handleAssociation}/>
-            </div>
-          )
-        }     */
-        
