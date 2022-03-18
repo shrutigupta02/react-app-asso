@@ -12,7 +12,7 @@ export type associations = {
 
 
 
-export default class Searchengine extends React.Component<associations, {}> {
+export default class Searchengine extends React.Component<associations, {}>{
   render() {
     // console.log(this.props)
     return (

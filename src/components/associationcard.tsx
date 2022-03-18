@@ -14,14 +14,11 @@ export type association = {
 
 export default class Associationcard extends React.Component<association, {}>{
   render() {
-    console.log(this.props)
     return (
       <div>
-
-          <Link to="/" onClick={() => this.props.handleAssociation({id:this.props.association.id , name:this.props.association.name,description:this.props.association.description}) }>
+          <Link to="/" onClick={() => this.props.handleAssociation(this.props.association.id, this.props.association.name, this.props.association.description) }>
                 card : id= {this.props.association.id} {this.props.association.name} - {this.props.association.description}
-          </Link>
-          
+          </Link>         
       </div>  
     )
   }
