@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import Converter from './converter'
+import Converter from '../converter/converter'
 
 export type association = {
     association: {

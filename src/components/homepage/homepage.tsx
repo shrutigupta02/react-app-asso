@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Searchengine from './searchengine'
-import Donationpage from './donationpage'
+import Searchengine from '../searchengine/searchengine'
+import Donationpage from '../donationpage/donationpage'
 
 
 // define the type of the state
@@ -20,7 +20,7 @@ export type AssociationsState = {
 
 // creation of the home page component
 export default class Homepage extends React.Component<{}, AssociationsState>{
-    
+  
   // initialize the state
   state = {
     associations: [
