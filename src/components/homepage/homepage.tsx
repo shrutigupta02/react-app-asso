@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Searchengine from '../searchengine/searchengine'
 import Donationpage from '../donationpage/donationpage'
 import Nav from '../nav/nav'
+import Myaccount from '../myaccount/myaccount'
 
 
 // define the type of the state
@@ -16,6 +17,7 @@ export type AssociationsState = {
     name:string,
     description: string
   }
+  accountPageOpened: Boolean
 }
 
 
@@ -36,14 +38,17 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
       id: -1,
       name:'none',
       description: 'none'
-    }
+    },
+    accountPageOpened: false 
   }
 
   // function to modify the association selected in the state
   handleAssociation = (associationSelectedId:number, associationSelectedName:string, associationSelectedDescription:string) => {
     let associationSelected = {id:associationSelectedId, name:associationSelectedName , description:associationSelectedDescription}
     let associations = this.state.associations
-    let newAssociations = {associations, associationSelected}
+    let accountPageOpened = this.state.accountPageOpened
+    let newAssociations = {associations, associationSelected, accountPageOpened}
+    
     
     this.setState(newAssociations)
   }
@@ -54,17 +59,40 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
     let assoSelectedName = this.state.associationSelected.name
     let assoSelectedDescription = this.state.associationSelected.description
     let associationSelected = {id:-1, name:assoSelectedName, description:assoSelectedDescription}
-    let newAssoState = {associations, associationSelected}
+    let accountPageOpened = this.state.accountPageOpened
+    let newAssoState = {associations, associationSelected, accountPageOpened}
 
     this.setState(newAssoState)
   }
 
+  handleAccountPageOpened = () => {
+    let associations = this.state.associations
+    let assoSelectedName = this.state.associationSelected.name
+    let assoSelectedDescription = this.state.associationSelected.description
+    let associationSelected = {id:-1, name:assoSelectedName, description:assoSelectedDescription}
+    let accountPageOpened = !this.state.accountPageOpened
+    let newState = {associations, associationSelected, accountPageOpened}
+
+    this.setState(newState)
+  }
+
   render() {
     
-    if(this.state.associationSelected.id==-1)
+    if(this.state.accountPageOpened==true){
       return (
         <div>
-          <Nav/>
+          <Nav handleAccountPageOpened={this.handleAccountPageOpened}/>
+          <Myaccount />
+        </div>
+      )
+      
+
+    } else if(this.state.associationSelected.id==-1)
+      return (
+        
+        <div>
+          <Nav handleAccountPageOpened={this.handleAccountPageOpened}/>
+          
           <Searchengine  associations={this.state.associations} handleAssociation={this.handleAssociation}/>
         </div>  
         
@@ -72,7 +100,7 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
     else {
       return (
         <div>
-          <Nav/>
+          <Nav handleAccountPageOpened={this.handleAccountPageOpened}/>
           <Donationpage association={this.state.associationSelected} handleAssociation={this.handleAssociation} quitPage={this.quitDonationPage} />
         </div>
       )
