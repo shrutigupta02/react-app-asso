@@ -3,6 +3,8 @@ import Searchengine from '../searchengine/searchengine'
 import Donationpage from '../donationpage/donationpage'
 import Nav from '../nav/nav'
 import Myaccount from '../myaccount/myaccount'
+import './homepage.css'
+
 
 
 // define the type of the state
@@ -17,13 +19,16 @@ export type AssociationsState = {
     name:string,
     description: string
   }
-  accountPageOpened: Boolean
+  accountPageOpened: Boolean,
+  userIsLoggedIn: Boolean
 }
+
 
 
 // creation of the home page component
 export default class Homepage extends React.Component<{}, AssociationsState>{
   
+ 
   // initialize the state
   state = {
     associations: [
@@ -39,7 +44,18 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
       name:'none',
       description: 'none'
     },
-    accountPageOpened: false 
+    accountPageOpened: true,
+    userIsLoggedIn: false
+  }
+
+  handleLogin = () => {
+    let associationSelected = this.state.associationSelected
+    let associations = this.state.associations
+    let accountPageOpened = this.state.accountPageOpened
+    let userIsLoggedIn = !this.state.userIsLoggedIn
+    let newState = {associations, associationSelected, accountPageOpened, userIsLoggedIn}
+
+    this.setState(newState)
   }
 
   // function to modify the association selected in the state
@@ -48,7 +64,6 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
     let associations = this.state.associations
     let accountPageOpened = this.state.accountPageOpened
     let newAssociations = {associations, associationSelected, accountPageOpened}
-    
     
     this.setState(newAssociations)
   }
@@ -69,41 +84,44 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
     let associations = this.state.associations
     let assoSelectedName = this.state.associationSelected.name
     let assoSelectedDescription = this.state.associationSelected.description
-    let associationSelected = {id:-1, name:assoSelectedName, description:assoSelectedDescription}
+    let assoSelectedId = this.state.associationSelected.id
+    let associationSelected = {id:assoSelectedId, name:assoSelectedName, description:assoSelectedDescription}
     let accountPageOpened = !this.state.accountPageOpened
     let newState = {associations, associationSelected, accountPageOpened}
 
     this.setState(newState)
   }
 
+
+
+  
+
   render() {
     
     if(this.state.accountPageOpened==true){
       return (
         <div>
-          <Nav handleAccountPageOpened={this.handleAccountPageOpened}/>
+          
+          <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin} userIsLoggedIn={this.state.userIsLoggedIn}  />
           <Myaccount />
         </div>
-      )
-      
-
-    } else if(this.state.associationSelected.id==-1)
-      return (
-        
+      )                 
+    } else if(this.state.associationSelected.id==-1 && this.state.accountPageOpened == false)
+      return (     
         <div>
-          <Nav handleAccountPageOpened={this.handleAccountPageOpened}/>
-          
+          la homepage
+          <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin} userIsLoggedIn={this.state.userIsLoggedIn}/>   
           <Searchengine  associations={this.state.associations} handleAssociation={this.handleAssociation}/>
         </div>  
-        
       )
+      
     else {
       return (
         <div>
-          <Nav handleAccountPageOpened={this.handleAccountPageOpened}/>
+          <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin} userIsLoggedIn={this.state.userIsLoggedIn}/>
           <Donationpage association={this.state.associationSelected} handleAssociation={this.handleAssociation} quitPage={this.quitDonationPage} />
         </div>
       )
-    }
+    } 
   }
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Converter from '../converter/converter'
+import './donationpage.css'
 
 
 export type association = {
@@ -16,7 +17,7 @@ export type association = {
 export default class Donationpage extends React.Component<association, {}>{
   render() {
     return (
-      <div> 
+      <div className='donationPage'> 
           
           nom : {this.props.association.name} -
           description : {this.props.association.description}
