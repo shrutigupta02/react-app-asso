@@ -18,3 +18,13 @@
     margin-left: 31px;
     margin-right: 90px;
 }
+
+.navbar .connexionButton{
+    color:#ffffff;
+    line-height: 4.16vw;
+    text-align: center;
+}
+
+.navbar img{
+    margin-right: 940px;
+}
