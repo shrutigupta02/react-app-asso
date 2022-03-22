@@ -8,9 +8,10 @@
 }
 
 h1{
+    width: 78.75rem;
     display: flex;
     font-size: 2.25rem;
-    margin: 3rem 0 0 3rem;
+    margin: 3rem auto;
 }
 
 h2{
@@ -36,17 +37,18 @@ h3{
 }
 
 .description{
+    width: 78.75rem;
     display: flex;
     font-size: 1.625rem;
-    margin: 3rem 0 0 3rem;
+    margin: 3rem auto;
 }
 
 .location{
-    width: 50%;
+    width: 78.75rem;;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    margin: 3rem 0 0 3rem;
+    margin: 3rem auto;
 }
 
 .adresse{
@@ -67,10 +69,11 @@ h3{
 }
 
 .title_converter{
+    width: 78.75rem;
     display: flex;
     font-size: 0.938rem;
     color: rgba(75, 75, 75, 1);
-    margin: 3rem 0 0 3rem;
+    margin: 3rem auto;
 }
 
 .container_converter{
