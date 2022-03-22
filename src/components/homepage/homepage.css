@@ -1,3 +1,35 @@
 div {
     font-size: 28px;
 }
+
+.home_container{
+    display: flex;
+    margin-top: 30vh;
+    margin-bottom: 20vh;
+}
+
+.titleandtext{
+    display: flex;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    flex-direction: column;
+    width: 50vw;
+    text-align: left;
+}
+
+h1{
+    color: #002F75;
+    font-size: 3vw;
+}
+
+.main_text{
+    color: #002F75;
+    font-size: 1.8vw;
+}
+
+.hp_pic{
+    max-height: 45vh;
+    max-width: 45vw;
+    margin-right: 11vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

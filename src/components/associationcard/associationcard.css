@@ -1,0 +1,26 @@
+.AssociationCard {
+    background-color: #e0ecff;
+    width: 259px;
+    height: 234px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.title {
+   font-family: 'Marianne-Bold';
+   color:#002F75;
+   font-size: 18px;
+   text-align: left;
+}
+
+.description {
+    color:#002F75;
+    font-size: 16px;
+    text-align: left;
+}
+
+.NameLink {
+    font-size: 16px;
+    color: #014AB9;
+    display:flex;
+}

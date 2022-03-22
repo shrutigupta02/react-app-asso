@@ -2,4 +2,170 @@
     position: absolute;
     top: 4.16vw;
     width: 100%;
+    background: rgba(252, 254, 255, 0.6);
 }
+
+.myaccount .title{
+    position: relative;
+    top: 90px;
+    left: 90px;
+    width: 493px;
+}
+
+.myaccount .title h1{
+    position: relative;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.myaccount .title h2{
+    font-size: 26px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.userInformations{
+    position: absolute;
+    top: 90px;
+    right: 90px;
+    display: flex;
+}
+
+.userInformations .userName{
+    font-family: "Marianne-Bold";
+    font-size: 18px;
+}
+
+.userInformations .userEmail{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+}
+
+.userInformations img{
+    width: 70px;
+    height: 70px;
+    margin-left: 30px;
+}
+
+.history{
+    position: absolute;
+    left: 90px;
+    top: 300px;
+    width: 405.89px;
+}
+
+.history h3{
+    font-family: 'Marianne';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+    margin-bottom: 48px;
+}
+
+.history div{
+    height: 68px;
+    border-bottom: 2px solid #000000;
+    text-align: left;
+    padding-left: 30px;
+}
+
+.history div .donationName{
+    position: relative;
+    font-family: 'Marianne';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.history div .donationDescription{
+    margin-top: 0;
+    margin-left: 5px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 18px;
+    color: #000000;
+}
+
+.rightColumn{
+    position: absolute;
+    top: 356.06px;
+    left: 880.37px;
+    text-align: left;
+}
+
+.newDonationInputTitle{
+    font-family: 'Marianne';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+}
+
+.newDonationInputNumber{
+    width: 172px;
+    height: 37.36px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-family: 'Open sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.29);
+}
+
+.newDonationInputNumber:nth-child(2){
+    margin-left: 13px;
+}
+
+.newDonationInputSubmit{
+    width: 172px;
+    height: 31.95px;
+    background: #002F75;
+    color: #FFFFFF;
+    margin-top: 27px;
+}
+
+.taxExoneration{
+    margin-top: 163px;
+}
+
+.taxExonerationTitle{
+    font-family: 'Marianne';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+}
+
+.taxExonerationNumber{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 72px;
+    line-height: 98px;
+    color: #000000;
+    margin-left: 90px;
+}
+
+.taxExonerationNumber::before{
+    content:'o';
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #DDE2ED;
+    color: #DDE2ED;
+}
+

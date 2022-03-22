@@ -4,6 +4,8 @@ import Donationpage from '../donationpage/donationpage'
 import Nav from '../nav/nav'
 import Myaccount from '../myaccount/myaccount'
 import './homepage.css'
+import Login from '../login/login'
+import homepage_img from '../../img/homepage_picture.png'
 
 
 
@@ -20,7 +22,7 @@ export type AssociationsState = {
     description: string
   }
   accountPageOpened: Boolean,
-  userIsLoggedIn: Boolean
+  userIsLoggingIn: Boolean
 }
 
 
@@ -44,16 +46,16 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
       name:'none',
       description: 'none'
     },
-    accountPageOpened: true,
-    userIsLoggedIn: false
+    accountPageOpened: false,
+    userIsLoggingIn: false
   }
 
   handleLogin = () => {
     let associationSelected = this.state.associationSelected
     let associations = this.state.associations
-    let accountPageOpened = this.state.accountPageOpened
-    let userIsLoggedIn = !this.state.userIsLoggedIn
-    let newState = {associations, associationSelected, accountPageOpened, userIsLoggedIn}
+    let accountPageOpened = false
+    let userIsLoggingIn = true
+    let newState = {associations, associationSelected, accountPageOpened, userIsLoggingIn}
 
     this.setState(newState)
   }
@@ -63,7 +65,8 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
     let associationSelected = {id:associationSelectedId, name:associationSelectedName , description:associationSelectedDescription}
     let associations = this.state.associations
     let accountPageOpened = this.state.accountPageOpened
-    let newAssociations = {associations, associationSelected, accountPageOpened}
+    let userIsLoggingIn = false
+    let newAssociations = {associations, associationSelected, accountPageOpened, userIsLoggingIn}
     
     this.setState(newAssociations)
   }
@@ -86,42 +89,70 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
     let assoSelectedDescription = this.state.associationSelected.description
     let assoSelectedId = this.state.associationSelected.id
     let associationSelected = {id:assoSelectedId, name:assoSelectedName, description:assoSelectedDescription}
-    let accountPageOpened = !this.state.accountPageOpened
-    let newState = {associations, associationSelected, accountPageOpened}
+    let accountPageOpened = true
+    let userIsLoggingIn = false
+    let newState = {associations, associationSelected, accountPageOpened, userIsLoggingIn}
 
     this.setState(newState)
   }
 
+  handleHomepage = () => {
+    let associationSelected = this.state.associationSelected
+    let associations = this.state.associations
+    let accountPageOpened = false
+    let userIsLoggingIn = false
+    let newState = {associations, associationSelected, accountPageOpened, userIsLoggingIn}
+
+    this.setState(newState)
+  }
 
 
   
 
   render() {
     
-    if(this.state.accountPageOpened==true){
+    if(this.state.accountPageOpened==true && this.state.userIsLoggingIn == false){
       return (
-        <div>
-          
-          <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin} userIsLoggedIn={this.state.userIsLoggedIn}  />
+        <div> 
+          <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin} handleHomepage={this.handleHomepage}/>
           <Myaccount />
         </div>
       )                 
-    } else if(this.state.associationSelected.id==-1 && this.state.accountPageOpened == false)
+    } else if(this.state.associationSelected.id==-1 && this.state.accountPageOpened == false && this.state.userIsLoggingIn == false)
       return (     
         <div>
-          la homepage
-          <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin} userIsLoggedIn={this.state.userIsLoggedIn}/>   
+          <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin} handleHomepage={this.handleHomepage}/> 
+          <div className='home_container'>
+            <div className='titleandtext'>
+              <h1>Économisez et Soutenez</h1>
+              <p className='main_text'>
+              Vous cherchez le moyen de baisser 
+              vos impots et de soutenir une association 
+              qui vous tiens à coeur.
+
+              Nous sommes là pour vous !
+              </p>
+            </div> 
+            <img src={homepage_img} alt="homepage_img" className='hp_pic'></img>
+          </div>
           <Searchengine  associations={this.state.associations} handleAssociation={this.handleAssociation}/>
         </div>  
-      )
-      
-    else {
+      ) 
+    else if(this.state.userIsLoggingIn == true){
       return (
         <div>
-          <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin} userIsLoggedIn={this.state.userIsLoggedIn}/>
+          <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin} handleHomepage={this.handleHomepage}/>
+          <Login />
+        </div>
+      )
+    } else {
+      return (
+        <div>
+          <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin} handleHomepage={this.handleHomepage}/>
           <Donationpage association={this.state.associationSelected} handleAssociation={this.handleAssociation} quitPage={this.quitDonationPage} />
         </div>
       )
     } 
+
   }
 }
