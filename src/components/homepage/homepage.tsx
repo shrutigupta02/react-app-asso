@@ -120,8 +120,21 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
     } else if(this.state.associationSelected.id==-1 && this.state.accountPageOpened == false && this.state.userIsLoggingIn == false)
       return (     
         <div>
-          la homepage
-          <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin} handleHomepage={this.handleHomepage}/>   
+          <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin} handleHomepage={this.handleHomepage}/> 
+          <div className='home_container'>
+            <div className='titleandtext'>
+              <h1>Économisez et Soutenez</h1>
+              <p className='main_text'>
+              Vous cherchez le moyen de baisser 
+              vos impots et de soutenir une association 
+              qui vous tiens à coeur.
+
+              Nous sommes là pour vous !
+              </p>
+            </div> 
+            <img src='' alt="homepage_img" className='hp_pic'></img>
+          </div>
+          <Searchengine associations={this.state.associations} handleAssociation={this.handleAssociation}/>  
           <Searchengine  associations={this.state.associations} handleAssociation={this.handleAssociation}/>
         </div>  
       ) 
