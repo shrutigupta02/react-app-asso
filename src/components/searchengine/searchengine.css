@@ -1,5 +1,9 @@
 .searchEngine{
-    position: absolute;
-    top: 5.16vw;
+    /* position: absolute;
+    top: 5.16vw; */
     width: 100%;
+}
+
+.input_bar{
+    margin-bottom: 20vh;
 }

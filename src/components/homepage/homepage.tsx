@@ -4,6 +4,7 @@ import Donationpage from '../donationpage/donationpage'
 import Nav from '../nav/nav'
 import Myaccount from '../myaccount/myaccount'
 import './homepage.css'
+import homepage_picture from '../../images/homepage_picture.png'
 
 
 
@@ -110,9 +111,22 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
       return (     
         <div>
           la homepage
-          <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin} userIsLoggedIn={this.state.userIsLoggedIn}/>   
-          <Searchengine  associations={this.state.associations} handleAssociation={this.handleAssociation}/>
-        </div>  
+          <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin} userIsLoggedIn={this.state.userIsLoggedIn}/>  
+          <div className='home_container'>
+            <div className='titleandtext'>
+              <h1>Économisez et Soutenez</h1>
+              <p className='main_text'>
+              Vous cherchez le moyen de baisser 
+              vos impots et de soutenir une association 
+              qui vous tiens à coeur.
+
+              Nous sommes là pour vous !
+              </p>
+            </div> 
+            <img src={homepage_picture} alt="homepage_img" className='hp_pic'></img>
+          </div>
+            <Searchengine associations={this.state.associations} handleAssociation={this.handleAssociation}/>
+        </div>
       )
       
     else {
