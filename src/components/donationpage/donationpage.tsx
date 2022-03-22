@@ -33,9 +33,12 @@ export default class Donationpage extends React.Component<association, {}>{
           <p className='title_converter'>Rentrez votre don pour voir quelle somme va pouvoir être déduite de vos impôts </p>
           <div className='container_converter'>
             <Converter/>
-            <div className='donattion_button_section'>
-              <button type='button' className='save_donation'>Donner sur le site</button>
+            <div className='donation_button_section'>
+              <button type='button' className='give_donation'>Donner sur le site</button>
             </div>
+          </div>
+          <div className='how_to'>
+            <h2>Comment ça marche ?</h2>
           </div>
       </div>
     )

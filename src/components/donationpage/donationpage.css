@@ -52,6 +52,33 @@ h1{
 .container_converter{
     display: flex;
     align-items: center;
-    margin: 3rem 0 0 3rem;
+    justify-content: space-between;
+    margin: 3rem 3rem 0 3rem;
 }
 
+.donation_button_section{
+    width: 28.75rem;
+    height: 16.793rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(250, 252, 255);
+    border-radius: 1.25rem;
+}
+
+.give_donation{
+    width: 21.769rem;
+    height: 4.699rem;
+    font-size: 2.25rem;
+    background-color: rgba(0, 47, 117, 1);
+    color: rgba(255, 255, 255, 1);
+    border: none;
+}
+
+.how_to{
+    width: 78.75rem;
+    height: 46.338rem;
+    background-color: rgb(250, 252, 255);
+    border-radius: 1.25rem;
+    margin: 3rem 3rem 0 3rem;
+}
