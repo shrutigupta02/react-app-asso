@@ -20,7 +20,7 @@ export default class Donationpage extends React.Component<association, {}>{
       <div className='donationPage'> 
 
           <Link className='quit' to="/" onClick={() => {this.props.quitPage()}}>retour</Link>
-          <h1>nom : {this.props.association.name}</h1>
+          <h1 className='association_name'>nom : {this.props.association.name}</h1>
           <p className='description'>description : {this.props.association.description}</p>
           <div className='location'>
             <img src="" alt="" />
@@ -36,10 +36,10 @@ export default class Donationpage extends React.Component<association, {}>{
           </div>
           <div className='how_to'>
             <section>
-              <h2>Comment ça marche ?</h2>
-              <h3>Dons à des organismes d'intérêt général ou reconnu d'utilité publique</h3>
+              <h2 className='how_to_title'>Comment ça marche ?</h2>
+              <h3 className='title_information'>Dons à des organismes d'intérêt général ou reconnu d'utilité publique</h3>
               <p>Les dons ouvrent droit à une réduction d'impôt sur le revenu égale à 66 % du montant versé dans la limite de 20 % du revenu imposable. Un don de 50 € ouvre par exemple droit à une réduction d'impôt de 33 €, un don de 100 € à une réduction de 66 €, etc.</p>
-              <h3>Dons à des organismes d'aide aux personnes en difficulté ou aux victimes de violences domestiques</h3>
+              <h3 className='title_information'>Dons à des organismes d'aide aux personnes en difficulté ou aux victimes de violences domestiques</h3>
               <p>La réduction d'impôt est de 75 % pour un don d'un montant inférieur ou égal à 1000 €. La fraction au-delà de 1000 € ouvre droit à une réduction d'impôt de 66 % du montant donné.</p>
               <p>Cette réduction d'impôt ne peut être supérieure à 20 % du revenu imposable.</p>
             </section>

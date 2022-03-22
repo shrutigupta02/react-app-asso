@@ -7,18 +7,18 @@
     
 }
 
-h1{
+.association_name{
     width: 78.75rem;
     display: flex;
     font-size: 2.25rem;
     margin: 3rem auto;
 }
 
-h2{
+.how_to_title{
     font-size: 2.25rem;
 }
 
-h3{
+.title_information{
     font-size: 1.75rem;
     text-decoration: underline;
 }
