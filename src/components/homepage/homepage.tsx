@@ -39,7 +39,9 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
       {id:2, name: 'asso3', description: 'description3'},
       {id:3, name: 'bilbou', description: 'description1'},
       {id:4, name: 'ccccc', description: 'description2'},
-      {id:5, name: 'nanmaisnanmaisnanmains', description: 'description3'}
+      {id:5, name: 'nanmaisnannanmains', description: 'description3'},
+      {id:6, name: 'ccccc', description: 'description2'},
+      {id:7, name: 'nanmaisnanmaisndsfins', description: 'description3'}
     ],
     associationSelected: {
       id: -1,
