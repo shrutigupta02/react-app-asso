@@ -16,3 +16,5 @@ code {
    url("./fonts/Marianne-Bold.woff") format("woff");
   font-weight: bold;
   }
+
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');

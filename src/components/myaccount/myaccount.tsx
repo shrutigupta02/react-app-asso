@@ -1,18 +1,21 @@
 import React, { Component } from 'react'
 import './myaccount.css'
+import usericon from '../../img/user-icon.png'
 
 export default class Myaccount extends Component {
   render() {
     return (
       <div className="myaccount">
-        <div className='Title'>
+        <div className='title'>
           <h1>Votre compte</h1>
           <h2>Retrouvez ici tout vos dons enregistrés</h2>
         </div>
         <div className='userInformations'>
-          <p className='userName'>Nom de l'utilisateur</p>
-          <p className='userEmail'>email@email.com</p>
-          <img src="/" alt="user icon" />
+          <div>
+            <p className='userName'>Nom de l'utilisateur</p>
+            <p className='userEmail'>email@email.com</p>
+          </div>
+          <img src={usericon} alt="user icon" />
         </div>
         <div className='history'>
           <h3>Historique des dons</h3>

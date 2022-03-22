@@ -4,6 +4,7 @@ import Donationpage from '../donationpage/donationpage'
 import Nav from '../nav/nav'
 import Myaccount from '../myaccount/myaccount'
 import './homepage.css'
+import Login from '../login/login'
 
 
 
@@ -20,7 +21,7 @@ export type AssociationsState = {
     description: string
   }
   accountPageOpened: Boolean,
-  userIsLoggedIn: Boolean
+  userIsLoggingIn: Boolean
 }
 
 
@@ -45,15 +46,15 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
       description: 'none'
     },
     accountPageOpened: true,
-    userIsLoggedIn: false
+    userIsLoggingIn: false
   }
 
   handleLogin = () => {
     let associationSelected = this.state.associationSelected
     let associations = this.state.associations
     let accountPageOpened = this.state.accountPageOpened
-    let userIsLoggedIn = !this.state.userIsLoggedIn
-    let newState = {associations, associationSelected, accountPageOpened, userIsLoggedIn}
+    let userIsLoggingIn = !this.state.userIsLoggingIn
+    let newState = {associations, associationSelected, accountPageOpened, userIsLoggingIn}
 
     this.setState(newState)
   }
@@ -98,30 +99,36 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
 
   render() {
     
-    if(this.state.accountPageOpened==true){
+    if(this.state.accountPageOpened==true && this.state.userIsLoggingIn == false){
       return (
-        <div>
-          
-          <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin} userIsLoggedIn={this.state.userIsLoggedIn}  />
+        <div> 
+          <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin}/>
           <Myaccount />
         </div>
       )                 
-    } else if(this.state.associationSelected.id==-1 && this.state.accountPageOpened == false)
+    } else if(this.state.associationSelected.id==-1 && this.state.accountPageOpened == false && this.state.userIsLoggingIn == false)
       return (     
         <div>
           la homepage
-          <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin} userIsLoggedIn={this.state.userIsLoggedIn}/>   
+          <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin}/>   
           <Searchengine  associations={this.state.associations} handleAssociation={this.handleAssociation}/>
         </div>  
-      )
-      
-    else {
+      ) 
+    else if(this.state.userIsLoggingIn == true){
       return (
         <div>
-          <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin} userIsLoggedIn={this.state.userIsLoggedIn}/>
+          <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin}/>
+          <Login />
+        </div>
+      )
+    } else {
+      return (
+        <div>
+          <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin}/>
           <Donationpage association={this.state.associationSelected} handleAssociation={this.handleAssociation} quitPage={this.quitDonationPage} />
         </div>
       )
     } 
+
   }
 }
