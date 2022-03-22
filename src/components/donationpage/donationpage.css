@@ -3,5 +3,33 @@
     position: absolute;
     top: 4.16vw;
     width: 100%;
+    background-color: rgba(224, 241, 254, 0.6);
     
+}
+
+h1{
+    display: flex;
+    font-size: 2.25rem;
+    margin: 3rem 0 0 3rem;
+}
+
+.description{
+    display: flex;
+    font-size: 1.625rem;
+    margin: 3rem 0 0 3rem;
+}
+
+.location{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.adresse{
+    font-size: 1.625rem;
+}
+
+.save_donation{
+    font-size: 1.125rem;
 }

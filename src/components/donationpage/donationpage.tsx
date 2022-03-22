@@ -25,6 +25,13 @@ export default class Donationpage extends React.Component<association, {}>{
           <Link to="/" onClick={() => {this.props.quitPage()}}>quitter la page</Link>
 
           < Converter />
+          <h1>nom : {this.props.association.name}</h1>
+          <p className='description'>description : {this.props.association.description}</p>
+          <div className='location'>
+            <img src="" alt="" />
+            <p className='adresse'>3 rue de Metz 75010 Paris</p>
+            <button type='button' className='save_donation'>Enregistrer dans mes dons</button>
+          </div>
       </div>
     )
   }
