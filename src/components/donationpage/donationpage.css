@@ -32,4 +32,26 @@ h1{
 
 .save_donation{
     font-size: 1.125rem;
+    background-color: rgba(0, 47, 117, 1);
+    color: rgba(255, 255, 255, 1);
+    padding: 0.625rem 1.688rem;
+    border: none;
 }
+
+.save_donation:hover{
+    background-color: rgba(55, 134, 255, 1);
+}
+
+.title_converter{
+    display: flex;
+    font-size: 0.938rem;
+    color: rgba(75, 75, 75, 1);
+    margin: 3rem 0 0 3rem;
+}
+
+.container_converter{
+    display: flex;
+    align-items: center;
+    margin: 3rem 0 0 3rem;
+}
+

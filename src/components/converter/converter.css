@@ -1,0 +1,29 @@
+.section_converter{
+    width: 48.75rem;
+    height: 16.793rem;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(250, 252, 255);
+    border-radius: 1.25rem;
+}
+
+
+input{
+    width: 19.438rem;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.29);
+    font-size: 2.25rem;
+    margin: 2rem;
+    border-radius: 0.25rem;
+}
+
+label{
+    font-size: 1.75rem;
+    color: rgb(1, 74, 185);
+}
+
+.amount, .deduction{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
