@@ -19,7 +19,7 @@ export default class Donationpage extends React.Component<association, {}>{
     return (
       <div className='donationPage'> 
 
-          <Link to="/" onClick={() => {this.props.quitPage()}}>quitter la page</Link>
+          <Link className='quit' to="/" onClick={() => {this.props.quitPage()}}>retour</Link>
           <h1>nom : {this.props.association.name}</h1>
           <p className='description'>description : {this.props.association.description}</p>
           <div className='location'>
