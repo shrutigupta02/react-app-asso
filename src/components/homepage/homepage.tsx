@@ -5,6 +5,7 @@ import Nav from '../nav/nav'
 import Myaccount from '../myaccount/myaccount'
 import './homepage.css'
 import Login from '../login/login'
+import homepage_img from '../../img/homepage_picture.png'
 
 
 
@@ -132,7 +133,7 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
               Nous sommes là pour vous !
               </p>
             </div> 
-            <img src='' alt="homepage_img" className='hp_pic'></img>
+            <img src={homepage_img} alt="homepage_img" className='hp_pic'></img>
           </div>
           <Searchengine associations={this.state.associations} handleAssociation={this.handleAssociation}/>  
           <Searchengine  associations={this.state.associations} handleAssociation={this.handleAssociation}/>
