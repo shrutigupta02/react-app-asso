@@ -2,4 +2,126 @@
     position: absolute;
     top: 4.16vw;
     width: 100%;
+    background-color: rgba(224, 241, 254, 0.6);
+    padding-bottom: 3.75rem;
+    
 }
+
+h1{
+    width: 78.75rem;
+    display: flex;
+    font-size: 2.25rem;
+    margin: 3rem auto;
+}
+
+h2{
+    font-size: 2.25rem;
+}
+
+h3{
+    font-size: 1.75rem;
+    text-decoration: underline;
+}
+
+.quit{
+    width: 95%;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    margin-top: 3rem;
+    text-decoration: none;
+}
+
+.quit:hover{
+    text-decoration: underline;
+}
+
+.description{
+    width: 78.75rem;
+    display: flex;
+    font-size: 1.625rem;
+    margin: 2rem auto;
+}
+
+.location{
+    width: 78.75rem;;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2rem auto;
+}
+
+.adresse{
+    font-size: 1.625rem;
+}
+
+.save_donation{
+    width: 17.462rem;
+    height: 2.748rem;
+    font-size: 1.125rem;
+    background-color: rgba(0, 47, 117, 1);
+    color: rgba(255, 255, 255, 1);
+    border: none;
+}
+
+.save_donation:hover, .give_donation:hover{
+    background-color: rgba(55, 134, 255, 1);
+}
+
+.title_converter{
+    width: 78.75rem;
+    display: flex;
+    font-size: 0.938rem;
+    color: rgba(75, 75, 75, 1);
+    margin: 2rem auto;
+}
+
+.container_converter{
+    width: 78.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem auto;
+}
+
+.donation_button_section{
+    width: 28.75rem;
+    height: 16.793rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(250, 252, 255);
+    border-radius: 1.25rem;
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.13);
+}
+
+.give_donation{
+    width: 21.769rem;
+    height: 4.699rem;
+    font-size: 2.25rem;
+    background-color: rgba(0, 47, 117, 1);
+    color: rgba(255, 255, 255, 1);
+    border: none;
+}
+
+.how_to{
+    display: flex;
+    align-items: center;
+    width: 78.75rem;
+    height: 46.338rem;
+    background-color: rgb(250, 252, 255);
+    border-radius: 1.25rem;
+    margin: 0 auto;
+    text-align: start;
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.13);
+}
+
+.how_to p{
+    font-size: 1.5rem;
+}
+
+.how_to section{
+    width: 85%;
+    margin: 0 auto;
+}
+
