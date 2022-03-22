@@ -6,6 +6,7 @@ import logo from '../../img/logo.png'
 export type NavProps = {
   handleAccountPageOpened: Function
   handleLogin: Function
+  handleHomepage: Function
 }
 
 
@@ -20,7 +21,7 @@ export default class Nav extends React.Component<NavProps, {}>{
             <Link to="/" onClick={() => this.props.handleAccountPageOpened()} className='accountButton'>Mon Compte</Link>
             <Link to="/" onClick={() => this.props.handleLogin()} className='connexionButton'>se connecter </Link>
             
-            <img src={logo} alt='1don1po logo marque site' onClick={() => {this.props.handleAccountPageOpened()}}></img>
+            <img src={logo} alt='1don1po logo marque site' onClick={() => {this.props.handleHomepage()}}></img>
             
             
         </div>

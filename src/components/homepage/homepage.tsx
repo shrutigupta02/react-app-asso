@@ -45,15 +45,15 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
       name:'none',
       description: 'none'
     },
-    accountPageOpened: true,
+    accountPageOpened: false,
     userIsLoggingIn: false
   }
 
   handleLogin = () => {
     let associationSelected = this.state.associationSelected
     let associations = this.state.associations
-    let accountPageOpened = this.state.accountPageOpened
-    let userIsLoggingIn = !this.state.userIsLoggingIn
+    let accountPageOpened = false
+    let userIsLoggingIn = true
     let newState = {associations, associationSelected, accountPageOpened, userIsLoggingIn}
 
     this.setState(newState)
@@ -64,7 +64,8 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
     let associationSelected = {id:associationSelectedId, name:associationSelectedName , description:associationSelectedDescription}
     let associations = this.state.associations
     let accountPageOpened = this.state.accountPageOpened
-    let newAssociations = {associations, associationSelected, accountPageOpened}
+    let userIsLoggingIn = false
+    let newAssociations = {associations, associationSelected, accountPageOpened, userIsLoggingIn}
     
     this.setState(newAssociations)
   }
@@ -87,12 +88,22 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
     let assoSelectedDescription = this.state.associationSelected.description
     let assoSelectedId = this.state.associationSelected.id
     let associationSelected = {id:assoSelectedId, name:assoSelectedName, description:assoSelectedDescription}
-    let accountPageOpened = !this.state.accountPageOpened
-    let newState = {associations, associationSelected, accountPageOpened}
+    let accountPageOpened = true
+    let userIsLoggingIn = false
+    let newState = {associations, associationSelected, accountPageOpened, userIsLoggingIn}
 
     this.setState(newState)
   }
 
+  handleHomepage = () => {
+    let associationSelected = this.state.associationSelected
+    let associations = this.state.associations
+    let accountPageOpened = false
+    let userIsLoggingIn = false
+    let newState = {associations, associationSelected, accountPageOpened, userIsLoggingIn}
+
+    this.setState(newState)
+  }
 
 
   
@@ -102,7 +113,7 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
     if(this.state.accountPageOpened==true && this.state.userIsLoggingIn == false){
       return (
         <div> 
-          <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin}/>
+          <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin} handleHomepage={this.handleHomepage}/>
           <Myaccount />
         </div>
       )                 
@@ -110,21 +121,21 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
       return (     
         <div>
           la homepage
-          <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin}/>   
+          <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin} handleHomepage={this.handleHomepage}/>   
           <Searchengine  associations={this.state.associations} handleAssociation={this.handleAssociation}/>
         </div>  
       ) 
     else if(this.state.userIsLoggingIn == true){
       return (
         <div>
-          <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin}/>
+          <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin} handleHomepage={this.handleHomepage}/>
           <Login />
         </div>
       )
     } else {
       return (
         <div>
-          <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin}/>
+          <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin} handleHomepage={this.handleHomepage}/>
           <Donationpage association={this.state.associationSelected} handleAssociation={this.handleAssociation} quitPage={this.quitDonationPage} />
         </div>
       )
