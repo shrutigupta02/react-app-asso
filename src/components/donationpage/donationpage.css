@@ -1,4 +1,5 @@
 .donationPage{
+    position: absolute;
     top: 4.16vw;
     width: 100%;
     background-color: rgba(224, 241, 254, 0.6);
@@ -23,6 +24,7 @@ h1{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 3rem 0 0 3rem;
 }
 
 .adresse{
@@ -30,10 +32,11 @@ h1{
 }
 
 .save_donation{
+    width: 17.462rem;
+    height: 2.748rem;
     font-size: 1.125rem;
     background-color: rgba(0, 47, 117, 1);
     color: rgba(255, 255, 255, 1);
-    padding: 0.625rem 1.688rem;
     border: none;
 }
 
