@@ -1,9 +1,8 @@
 .donationPage{
-   
-    position: absolute;
     top: 4.16vw;
     width: 100%;
     background-color: rgba(224, 241, 254, 0.6);
+    padding-bottom: 3.75rem;
     
 }
 
@@ -38,7 +37,7 @@ h1{
     border: none;
 }
 
-.save_donation:hover{
+.save_donation:hover, .give_donation:hover{
     background-color: rgba(55, 134, 255, 1);
 }
 
@@ -50,10 +49,11 @@ h1{
 }
 
 .container_converter{
+    width: 78.75rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 3rem 3rem 0 3rem;
+    margin: 3rem auto;
 }
 
 .donation_button_section{
@@ -64,6 +64,7 @@ h1{
     align-items: center;
     background-color: rgb(250, 252, 255);
     border-radius: 1.25rem;
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.13);
 }
 
 .give_donation{
@@ -76,9 +77,32 @@ h1{
 }
 
 .how_to{
+    display: flex;
+    align-items: center;
     width: 78.75rem;
     height: 46.338rem;
     background-color: rgb(250, 252, 255);
     border-radius: 1.25rem;
-    margin: 3rem 3rem 0 3rem;
+    margin: 0 auto;
+    text-align: start;
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.13);
 }
+
+h2{
+    font-size: 2.25rem;
+}
+
+h3{
+    font-size: 1.75rem;
+    text-decoration: underline;
+}
+
+.how_to p{
+    font-size: 1.5rem;
+}
+
+.how_to section{
+    width: 68.75rem;
+    margin: 0 auto;
+}
+
