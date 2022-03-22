@@ -20,37 +20,41 @@ export default class Myaccount extends Component {
         <div className='history'>
           <h3>Historique des dons</h3>
           <div>
-            <p>Don 1</p>
-            <p>15,00</p>
+            <p className='donationName'>Don 1</p>
+            <p className='donationDescription'>15,00</p>
           </div>
           <div>
-            <p>Don 2</p>
-            <p>15,00</p>
-          </div>
-          <div>
-            <p>Don 3</p>
-            <p>15,00</p>
-          </div>
-          <div>
-            <p>Don 4</p>
-            <p>15,00</p>
-          </div>
-          <div>
-            <p>Don 5</p>
-            <p>15,00</p>
-          </div>
-          <div>
-            <p>Don 6</p>
-            <p>15,00</p>
-          </div>
-          <div>
-            <p>Don 7</p>
-            <p>15,00</p>
+            <p className='donationName'>Don 2</p>
+            <p className='donationDescription'>10,00</p>
+          </div><div>
+            <p className='donationName'>Don 3</p>
+            <p className='donationDescription'>12,00</p>
+          </div><div>
+            <p className='donationName'>Don 4</p>
+            <p className='donationDescription'>11,00</p>
+          </div><div>
+            <p className='donationName'>Don 5</p>
+            <p className='donationDescription'>10,00</p>
+          </div><div>
+            <p className='donationName'>Don 6</p>
+            <p className='donationDescription'>15,00</p>
+          </div><div>
+            <p className='donationName'>Don 7</p>
+            <p className='donationDescription'>15,00</p>
           </div>
         </div>
         <div className='rightColumn'>
-          <div className='newDonationInput'></div>
+          <p className='newDonationInputTitle'>Enregistrer un don manuellement</p>
+          <div className='newDonationInput'>
+            <input type='number' placeholder='  somme donnée' className='newDonationInputNumber' />
+            <input type='text' placeholder='  nom de l association' className='newDonationInputNumber' />
+          </div>
+          <input type='submit' className='newDonationInputSubmit' />
           <div></div>
+          <div className='taxExoneration'>
+            <p className='taxExonerationTitle'>Déduction d’impôts sur la periode </p>
+            <p className='taxExonerationNumber'>15,00€</p>
+          </div>
         </div>
         
       </div>
