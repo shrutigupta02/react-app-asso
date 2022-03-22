@@ -14,11 +14,11 @@ import './converter.css'
       <div className='section_converter'>
         <div className="amount">
           <label htmlFor="">Montant du don</label>
-          <input type="number" placeholder='0.00' onChange={event => setChangeNumber(event.target.value)}/>
+          <input className="amount_input" type="number" placeholder='0.00' onChange={event => setChangeNumber(event.target.value)}/>
         </div>
         <div className="deduction">
           <label htmlFor="">Déduction</label>
-          <input type="number" value={parseInt(changeNumber)*0.75} disabled/> 
+          <input className="deduction_input"type="number" value={parseInt(changeNumber)*0.75} disabled/> 
         </div>
       </div>
     )
