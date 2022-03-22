@@ -135,7 +135,6 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
             </div> 
             <img src={homepage_img} alt="homepage_img" className='hp_pic'></img>
           </div>
-          <Searchengine associations={this.state.associations} handleAssociation={this.handleAssociation}/>  
           <Searchengine  associations={this.state.associations} handleAssociation={this.handleAssociation}/>
         </div>  
       ) 
