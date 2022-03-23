@@ -18,7 +18,7 @@ export default function Searchengine(props: associations) {
   
     return (
       <div className='searchEngine'> 
-        <input type="text" className='searchInput' placeholder="  Chercher une association..." onChange= {event => setSearchTerm(event.target.value)}/> 
+        <input type="text" className='searchInput' placeholder="Chercher une association..." onChange= {event => setSearchTerm(event.target.value)}/> 
         {/* mapping in the associations and displaying a card for each one */}
         <div className="cardContainer">
         {props.associations.filter((val) => {

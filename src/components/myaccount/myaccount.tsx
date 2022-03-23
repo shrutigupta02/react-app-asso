@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import './myaccount.css'
 import usericon from '../../img/user-icon.png'
 
@@ -10,12 +10,9 @@ export type AccountState = {
 
 export default function Myaccount(state: AccountState) {
 
-  state = {
-    userName:'HugBarbier',
-    taxExoneration:1000,
-    donations:[{name:'associationnum1', donationNumber:1300}, {name:'associationnum2', donationNumber:1300}, {name:'associationnum1', donationNumber:1300}, {name:'associationnum2', donationNumber:1300}, {name:'associationnum1', donationNumber:1300}, {name:'associationnum2', donationNumber:1300}]
-  }
-
+  
+  const [newDonationNumber, setNewDonationNumber] = useState('')
+  const [newDonationName, setNewDonationName] = useState('')
   
     return (
       <div className="myaccount">
@@ -39,18 +36,19 @@ export default function Myaccount(state: AccountState) {
         <div className='rightColumn'>
           <p className='newDonationInputTitle'>Enregistrer un don manuellement</p>
           <div className='newDonationInput'>
-            <input type='number' placeholder='  somme donnée' className='newDonationInputNumber' />
-            <input type='text' placeholder='  nom de l association' className='newDonationInputNumber' />
+            <input type='number' placeholder='  somme donnée' className='newDonationInputNumber' onChange={event => setNewDonationNumber(event.target.value)} />
+            <input type='text' placeholder='  nom de l association' className='newDonationInputNumber'  onChange={event => setNewDonationName(event.target.value)}/>
           </div>
-          <input type='submit' className='newDonationInputSubmit' />
+          <div className='newDonationInputSubmit'>Enregistrer le don</div>
           <div></div>
           <div className='taxExoneration'>
             <p className='taxExonerationTitle'>Déduction d’impôts sur la periode </p>
             <p className='taxExonerationNumber'>{state.taxExoneration}€</p>
           </div>
         </div>
-        
+        {/* {newDonationNumber}{newDonationName} */}
       </div>
     )
   
 }
+

@@ -37,7 +37,7 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
   // initialize the state
   state = {
     associations: [
-      {id:0, name: 'asso1', description: 'description1'},
+      {id:0, name: 'Centre d’étude et d’action sociales de Paris CEAS de Paris.', description: 'Ètude des problèmes familiaux sociaux susciter toute action ayant le souci du progrès social.'},
       {id:1, name: 'asso2', description: 'description2'},
       {id:2, name: 'asso3', description: 'description3'},
       {id:3, name: 'bilbou', description: 'description1'},
@@ -55,7 +55,18 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
     userIsLoggingIn: false,
     userName:'HugBarbier',
     taxExoneration:1000,
-    donations:[{name:'associationnum1', donationNumber:1300}, {name:'associationnum2', donationNumber:1300}]
+    donations:[
+      {name:'associationnum1', donationNumber:1300},
+      {name:'associationnum2', donationNumber:1300},
+      {name:'associationnum1', donationNumber:1300},
+      {name:'associationnum2', donationNumber:1300},
+      {name:'associationnum1', donationNumber:1300},
+      {name:'associationnum2', donationNumber:1300},
+      {name:'associationnum1', donationNumber:1300},
+      {name:'associationnum2', donationNumber:1300},
+      {name:'associationnum1', donationNumber:1300},
+      {name:'associationnum2', donationNumber:1300},
+    ]
   }
 
   handleLogin = () => {
