@@ -35,7 +35,6 @@ export default class Login extends React.Component<{},loginState>{
           <form action="" method="get" className='loginContainer'>
             <input type="email" name='email' id='email' placeholder='      email' className='loginInput'></input> 
             <input type="password" name='password' id='password' placeholder='     mot de passe' className='loginInput'/>
-            <input type="password" name='confirmpassword' id='confirmpassword' placeholder='     confirmer le mot de passe' className='loginInput'/>
             <input type="submit" value='créer un compte' className='loginInput confirmInput'/>
             <div></div>
             <p onClick={() => this.handleIsCreatingAccount() }>se connecter</p>

@@ -23,6 +23,9 @@ export type AssociationsState = {
   }
   accountPageOpened: Boolean,
   userIsLoggingIn: Boolean
+  userName:string,
+  taxExoneration:number,
+  donations:{name:string, donationNumber:number}[]
 }
 
 
@@ -49,7 +52,10 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
       description: 'none'
     },
     accountPageOpened: false,
-    userIsLoggingIn: false
+    userIsLoggingIn: false,
+    userName:'HugBarbier',
+    taxExoneration:1000,
+    donations:[{name:'associationnum1', donationNumber:1300}, {name:'associationnum2', donationNumber:1300}]
   }
 
   handleLogin = () => {
@@ -117,7 +123,7 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
       return (
         <div> 
           <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin} handleHomepage={this.handleHomepage}/>
-          <Myaccount />
+          <Myaccount userName={this.state.userName} taxExoneration={this.state.taxExoneration} donations={this.state.donations} />
         </div>
       )                 
     } else if(this.state.associationSelected.id==-1 && this.state.accountPageOpened == false && this.state.userIsLoggingIn == false)

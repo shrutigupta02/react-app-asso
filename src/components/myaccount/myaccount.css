@@ -93,6 +93,20 @@
     color: #000000;
 }
 
+.history div .donationName::before{
+    position: relative;
+    right: 10px;
+    bottom: 1px;
+    content: '';
+    display: inline-block;
+    width: 6.49px;
+    height: 6.49px;
+    -moz-border-radius: 7.5px;
+    -webkit-border-radius: 7.5px;
+    border-radius: 7.5px;
+    background-color: #DDE2ED;
+ }
+
 .rightColumn{
     position: absolute;
     top: 356.06px;
@@ -160,12 +174,16 @@
 }
 
 .taxExonerationNumber::before{
-    content:'o';
-    font-size: 40px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #DDE2ED;
-    color: #DDE2ED;
-}
+    position: relative;
+    right: 47.96px;
+    bottom: 22px;
+    content: '';
+    display: inline-block;
+    width: 17.28px;
+    height: 17.28px;
+    -moz-border-radius: 7.5px;
+    -webkit-border-radius: 7.5px;
+    border-radius: 7.5px;
+    background-color: #DDE2ED;
+ }
 
