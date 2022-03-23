@@ -8,18 +8,18 @@
 }
 
 .association_name{
-    width: 78.75rem;
+    width: 1260px;
     display: flex;
     font-size: 2.25rem;
     margin: 3rem auto;
 }
 
 .how_to_title{
-    font-size: 2.25rem;
+    font-size: 36px;
 }
 
 .title_information{
-    font-size: 1.75rem;
+    font-size: 26px;
     text-decoration: underline;
 }
 
@@ -36,32 +36,28 @@
     text-decoration: underline;
 }
 
-.description{
-    width: 78.75rem;
+.association_description{
+    width: 1260px;
     display: flex;
-    font-size: 1.625rem;
+    font-size: 28px;
     margin: 2rem auto;
 }
 
 .location{
-    width: 78.75rem;;
+    width: 270px;
+    height: 210px;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    margin: 2rem auto;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(250, 252, 255);
+    border-radius: 1.25rem;
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.13);
 }
 
 .adresse{
-    font-size: 1.625rem;
-}
-
-.save_donation{
-    width: 17.462rem;
-    height: 2.748rem;
-    font-size: 1.125rem;
-    background-color: rgba(0, 47, 117, 1);
-    color: rgba(255, 255, 255, 1);
-    border: none;
+    margin-left: 10px;
+    font-size: 18px;
 }
 
 .save_donation:hover, .give_donation:hover{
@@ -69,15 +65,15 @@
 }
 
 .title_converter{
-    width: 78.75rem;
+    width: 1260px;
     display: flex;
-    font-size: 0.938rem;
+    font-size: 15px;
     color: rgba(75, 75, 75, 1);
     margin: 2rem auto;
 }
 
 .container_converter{
-    width: 78.75rem;
+    width: 1260px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -85,8 +81,8 @@
 }
 
 .donation_button_section{
-    width: 28.75rem;
-    height: 16.793rem;
+    width: 300px;
+    height: 210px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,9 +92,8 @@
 }
 
 .give_donation{
-    width: 21.769rem;
-    height: 4.699rem;
-    font-size: 2.25rem;
+    width: 172px;
+    height: 31.95px;
     background-color: rgba(0, 47, 117, 1);
     color: rgba(255, 255, 255, 1);
     border: none;
@@ -107,8 +102,8 @@
 .how_to{
     display: flex;
     align-items: center;
-    width: 78.75rem;
-    height: 46.338rem;
+    width: 1260px;
+    height: 512px;
     background-color: rgb(250, 252, 255);
     border-radius: 1.25rem;
     margin: 0 auto;
@@ -116,12 +111,11 @@
     box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.13);
 }
 
-.how_to p{
-    font-size: 1.5rem;
-}
-
 .how_to section{
     width: 85%;
     margin: 0 auto;
 }
 
+.how_to_text{
+    font-size: 15px;
+}
