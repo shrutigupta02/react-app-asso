@@ -20,6 +20,7 @@ import './converter.css'
           <label className="deduction_title" htmlFor="">Déduction</label>
           <input className="deduction_input"type="number" value={parseInt(changeNumber)*0.75} disabled/> 
         </div>
+        <button type='button' className='save_donation'>Enregistrer dans mes dons</button>
       </div>
     )
 }
