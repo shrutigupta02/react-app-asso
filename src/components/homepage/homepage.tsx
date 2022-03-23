@@ -38,9 +38,9 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
   state = {
     associations: [
       {id:0, name: 'Centre d’étude et d’action sociales de Paris CEAS de Paris.', description: 'Ètude des problèmes familiaux sociaux susciter toute action ayant le souci du progrès social.'},
-      {id:1, name: 'asso2', description: 'description2'},
-      {id:2, name: 'asso3', description: 'description3'},
-      {id:3, name: 'bilbou', description: 'description1'},
+      {id:1, name: 'Evangile et vie', description: 'Travailler a la propagation des textes de l écriture sainte et des doctrines qu elle contient'},
+      {id:2, name: 'Etoile sportive française', description: 'Pratique des sports en general ainsi que la préparation militaire des jeunes gens'},
+      {id:3, name: 'Association sportive de la villa des otages', description: 'Création d une section judo et disciplines associées'},
       {id:4, name: 'ccccc', description: 'description2'},
       {id:5, name: 'nanmaisnannanmains', description: 'description3'},
       {id:6, name: 'ccccc', description: 'description2'},
