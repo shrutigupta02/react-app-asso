@@ -9,7 +9,7 @@
 }
 
 
-input{
+.amount_input, .deduction_input{
     width: 19.438rem;
     height: 4.75rem;
     text-align: center;
@@ -22,7 +22,7 @@ input::placeholder{
     color: rgba(0, 0, 0, 0.29);
 }
 
-label{
+.amount_title, .deduction_title{
     font-size: 1.75rem;
     font-weight: bold;
     color: rgb(1, 74, 185);
