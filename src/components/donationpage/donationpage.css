@@ -8,10 +8,10 @@
 }
 
 .association_name{
-    width: 1260px;
-    display: flex;
+    width: 600px;
+    text-align: start;
     font-size: 36px;
-    margin: 48px auto;
+    margin: 48px 0 48px 90px;
 }
 
 .how_to_title{
@@ -24,10 +24,11 @@
 }
 
 .quit{
-    width: 95%;
+    width: 100px;
     display: flex;
     justify-content: flex-end;
     position: absolute;
+    margin-left: 1260px;
     margin-top: 48px;
     text-decoration: none;
 }
@@ -37,10 +38,10 @@
 }
 
 .association_description{
-    width: 1260px;
-    display: flex;
+    width: 700px;
+    text-align: start;
     font-size: 28px;
-    margin: 32px auto;
+    margin: 32px 0 32px 90px;
 }
 
 .location{
