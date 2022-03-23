@@ -20,7 +20,7 @@ export default class Associationcard extends React.Component<association, {}>{
         <p className="title">{this.props.association.name}</p>
         <p className="description">{this.props.association.description}</p>
         <Link to="/" className="NameLink" onClick={() => this.props.handleAssociation(this.props.association.id, this.props.association.name, this.props.association.description) }>
-            En savoir plus
+            En savoir plus 
         </Link>         
       </div>  
     )

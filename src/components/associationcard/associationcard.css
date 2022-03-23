@@ -1,26 +1,39 @@
 .AssociationCard {
     background-color: #e0ecff;
-    width: 259px;
+    width: 239px;
     height: 234px;
     padding: 20px;
     border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.title {
-   font-family: 'Marianne-Bold';
-   color:#002F75;
-   font-size: 18px;
-   text-align: left;
+.AssociationCard .title {
+    font-family: 'Marianne-Bold';
+    text-align: left;
+    font-style: normal;
+    color: #002F75;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
 }
 
 .description {
-    color:#002F75;
-    font-size: 16px;
+    font-family: 'Open Sans';
     text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #002F75;
 }
 
 .NameLink {
     font-size: 16px;
     color: #014AB9;
     display:flex;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
 }

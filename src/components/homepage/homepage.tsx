@@ -105,8 +105,11 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
   }
 
   handleHomepage = () => {
-    let associationSelected = this.state.associationSelected
     let associations = this.state.associations
+    let assoSelectedName = this.state.associationSelected.name
+    let assoSelectedDescription = this.state.associationSelected.description
+    let assoSelectedId = -1
+    let associationSelected = {id:assoSelectedId, name:assoSelectedName, description:assoSelectedDescription}
     let accountPageOpened = false
     let userIsLoggingIn = false
     let newState = {associations, associationSelected, accountPageOpened, userIsLoggingIn}
