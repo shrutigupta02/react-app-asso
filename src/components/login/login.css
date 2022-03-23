@@ -20,7 +20,8 @@
 }
 
 .loginInput{
-    width: 364.13px;
+    width: 339.13px;
+    padding-left: 20px;
     height: 52.07px;
     background: #FFFFFF;
     border: 1px solid #DDDFE2;
@@ -38,6 +39,7 @@
     font-family: "Marianne-Bold";
     font-weight: 700;
     font-size: 24px;
+    cursor: pointer;
 }
 
 .loginContainer div{
@@ -58,6 +60,7 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 40px;
+    cursor: pointer;
 }
 
 

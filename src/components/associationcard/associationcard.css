@@ -17,7 +17,8 @@
     line-height: 21px;
 }
 
-.description {
+.AssociationCard .description {
+    width: 225px;
     font-family: 'Open Sans';
     text-align: left;
     font-style: normal;
@@ -28,6 +29,8 @@
 }
 
 .NameLink {
+    position: relative;
+    bottom: 0px;
     font-size: 16px;
     color: #014AB9;
     display:flex;
