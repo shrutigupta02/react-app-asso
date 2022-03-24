@@ -7,11 +7,22 @@
     
 }
 
+.header_association{
+    display: flex;
+    width: 1260px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 32px auto 0;
+}
+
 .association_name{
     width: 600px;
     text-align: start;
     font-size: 36px;
-    margin: 48px 0 48px 90px;
+}
+
+.quit{
+    width: 100px;
 }
 
 .how_to_title{
@@ -23,25 +34,20 @@
     text-decoration: underline;
 }
 
-.quit{
-    width: 100px;
-    display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    margin-left: 1260px;
-    margin-top: 48px;
-    text-decoration: none;
-}
-
 .quit:hover{
     text-decoration: underline;
+}
+
+.description_container{
+    display: flex;
+    width: 1260px;
+    margin: 0 auto 32px;
 }
 
 .association_description{
     width: 700px;
     text-align: start;
     font-size: 28px;
-    margin: 32px 0 32px 90px;
 }
 
 .location{
