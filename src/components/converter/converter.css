@@ -37,8 +37,9 @@ input::placeholder{
 }
 
 .save_donation{
-    width: 172px;
+    width: 190px;
     height: 31.95px;
+    font-family: 'Marianne';
     background-color: rgba(0, 47, 117, 1);
     color: rgba(255, 255, 255, 1);
     border: none;
