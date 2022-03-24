@@ -26,7 +26,14 @@
     text-align: center;
 }
 
+.homepageButton{
+    color:#ffffff;
+    line-height: 4.16vw;
+    text-align: center;
+    margin-right: 31px;
+}
+
 .navbar img{
-    margin-right: 940px;
+    margin-right: 880px;
     cursor: pointer;
 }
