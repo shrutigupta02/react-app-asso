@@ -1,6 +1,7 @@
 import React, { Component, useState } from 'react'
 import './myaccount.css'
 import usericon from '../../img/user-icon.png'
+// import { postNewDonation } from '../../api'
 
 export type AccountState = {
   userName:string,
@@ -35,10 +36,11 @@ export default function Myaccount(state: AccountState) {
         </div>
         <div className='rightColumn'>
           <p className='newDonationInputTitle'>Enregistrer un don manuellement</p>
-          <div className='newDonationInput'>
-            <input type='number' placeholder='  somme donnée' className='newDonationInputNumber' onChange={event => setNewDonationNumber(event.target.value)} />
-            <input type='text' placeholder='  nom de l association' className='newDonationInputNumber'  onChange={event => setNewDonationName(event.target.value)}/>
-          </div>
+          {/* onSubmit={{newDonationNumber:'10', newDonationName:'newDonationName'}} */}
+          <form method='' action='post' className='newDonationInput'>
+            <input type='number' placeholder='  somme donnée' className='newDonationInputNumber' value='0' onChange={event => setNewDonationNumber(event.target.value)} />
+            <input type='text' placeholder='  nom de l association' className='newDonationInputNumber' value=' ' onChange={event => setNewDonationName(event.target.value)}/>
+          </form>
           <div className='newDonationInputSubmit'>Enregistrer le don</div>
           <div></div>
           <div className='taxExoneration'>

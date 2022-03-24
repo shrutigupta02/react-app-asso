@@ -10,7 +10,6 @@ import homepage_img from '../../img/homepage_picture.png'
 
 
 
-
 // define the type of the state
 export type AssociationsState = {
   associations: {
