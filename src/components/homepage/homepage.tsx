@@ -9,6 +9,8 @@ import homepage_img from '../../img/homepage_picture.png'
 
 
 
+
+
 // define the type of the state
 export type AssociationsState = {
   associations: {
@@ -135,6 +137,7 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
     
     if(this.state.accountPageOpened==true && this.state.userIsLoggingIn == false){
       return (
+        
         <div> 
           <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin} handleHomepage={this.handleHomepage}/>
           <Myaccount userName={this.state.userName} taxExoneration={this.state.taxExoneration} donations={this.state.donations} />

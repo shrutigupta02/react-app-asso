@@ -1,7 +1,7 @@
 import React, { Component, useState } from 'react'
 import Associationcard from '../associationcard/associationcard'
 import './searchengine.css'
-
+import { getAllAssociations } from '../../api'
 
 export type associations = {
   associations: {
@@ -13,7 +13,7 @@ export type associations = {
 }
 
 export default function Searchengine(props: associations) {
-  
+  getAllAssociations()
   const [searchTerm, setSearchTerm] = useState('')
   
     return (
