@@ -20,6 +20,27 @@ export const postNewUser = (login:string, password:string) => {
 
 }
 
+// to give a new donation to the server
+export const postNewDonation = (donationNumber:number, associationName:string, userName:string) => {
+  
+    const axios = require('axios').default;
+
+    // axios.<method> will now provide autocomplete and parameter typings
+    
+    axios.post('https://h3-proxy.services.quickpipes.io/team9/setDonation', {
+        donation:donationNumber,
+        association:associationName,
+        user:userName
+    })
+    .then(function (response:any) {
+    console.log(response);
+    })
+    .catch(function (error:any) {
+    console.log(error);
+    });
+
+}
+
 // push a new donation to the server
 // event:React.FormEvent<HTMLFormElement>
 

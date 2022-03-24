@@ -129,6 +129,23 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
     this.setState(newState)
   }
 
+  handleGlobalUsername = (user:string) => {
+    let associations = this.state.associations
+    let assoSelectedName = this.state.associationSelected.name
+    let assoSelectedDescription = this.state.associationSelected.description
+    let assoSelectedId = this.state.associationSelected.id
+    let associationSelected = {id:assoSelectedId, name:assoSelectedName, description:assoSelectedDescription}
+    let accountPageOpened = false
+    let userIsLoggingIn = true
+    let userName = user
+    let taxExoneration = this.state.taxExoneration
+    let donations = this.state.donations
+
+    let newState = {associations, associationSelected, accountPageOpened, userIsLoggingIn, userName, taxExoneration, donations}
+    
+    this.setState(newState)
+  }
+
 
   
 
@@ -166,14 +183,14 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
       return (
         <div>
           <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin} handleHomepage={this.handleHomepage}/>
-          <Login />
+          <Login handleUser={this.handleGlobalUsername}/>
         </div>
       )
     } else {
       return (
         <div>
           <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin} handleHomepage={this.handleHomepage}/>
-          <Donationpage association={this.state.associationSelected} handleAssociation={this.handleAssociation} quitPage={this.quitDonationPage} />
+          <Donationpage association={this.state.associationSelected} handleAssociation={this.handleAssociation} quitPage={this.quitDonationPage} userName={this.state.userName} />
         </div>
       )
     } 
