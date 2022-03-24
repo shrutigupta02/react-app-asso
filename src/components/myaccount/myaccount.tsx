@@ -2,10 +2,10 @@ import React, { Component, useState } from 'react'
 import './myaccount.css'
 import usericon from '../../img/user-icon.png'
 // import { postNewDonation } from '../../api'
+import { getAllDonations } from '../../api'
 
 export type AccountState = {
   userName:string,
-  taxExoneration:number,
   donations:{name:string, donationNumber:number}[]
 }
 
@@ -14,7 +14,16 @@ export default function Myaccount(state: AccountState) {
   
   const [newDonationNumber, setNewDonationNumber] = useState('')
   const [newDonationName, setNewDonationName] = useState('')
+
+  let taxExonerationNumber:number = 0
+
+  for( let i=0; i<state.donations.length; i++){
+    taxExonerationNumber = taxExonerationNumber + state.donations[i].donationNumber 
+  }
+  taxExonerationNumber = taxExonerationNumber * 0.75
   
+
+
     return (
       <div className="myaccount">
         <div className='title'>
@@ -29,6 +38,7 @@ export default function Myaccount(state: AccountState) {
         </div>
         <div className='history'>
           <h3>Historique des dons</h3>
+          {/* getAllDonations() */}
           {state.donations.map((pres) => {
             return <div><p className='donationName'>{pres.name}</p><p className='donationDescription'>{pres.donationNumber}</p></div>
           })}
@@ -45,7 +55,7 @@ export default function Myaccount(state: AccountState) {
           <div></div>
           <div className='taxExoneration'>
             <p className='taxExonerationTitle'>Déduction d’impôts sur la periode </p>
-            <p className='taxExonerationNumber'>{state.taxExoneration}€</p>
+            <p className='taxExonerationNumber'>{taxExonerationNumber}€</p>
           </div>
         </div>
         {/* {newDonationNumber}{newDonationName} */}

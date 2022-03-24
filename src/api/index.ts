@@ -41,35 +41,30 @@ export const postNewDonation = (donationNumber:number, associationName:string, u
 
 }
 
-// push a new donation to the server
-// event:React.FormEvent<HTMLFormElement>
-
-// export const postNewDonation = (newDonationNumber:number, newDonationAsso:string) => {
-//     // event.preventDefault();
-//     const axios = require('axios').default;
-
-//     // axios.<method> will now provide autocomplete and parameter typings
-    
-//     axios.post('https://h3-proxy.services.quickpipes.io/team9/setUser', {
-//         name: newDonationNumber,
-//         amount: newDonationAsso
-//     })
-//     .then(function (response:any) {
-//     console.log(response);
-//     })
-//     .catch(function (error:any) {
-//     console.log(error);
-//     });
-// }
-
 export const getAllAssociations = () => {
     // mettre la bonne url
     axios.get('https://h3-proxy.services.quickpipes.io/team9/getAllAssos')
         .then(function (response:any) {
         // handle success
-        return 'c est réussi'
+        return 'c est réussi !'
         console.log(response);
-        console.log('ouaais')
+        })
+        .catch(function (error:any) {
+        // handle error
+        console.log(error);
+        })
+        .then(function () {
+        // always executed
+    });
+}
+
+export const getAllDonations = () => {
+    // mettre la bonne url
+    axios.get('https://h3-proxy.services.quickpipes.io/team9/user1donations')
+        .then(function (response:any) {
+        // handle success
+        return 'c est réussi !!!'
+        console.log(response);
         })
         .catch(function (error:any) {
         // handle error

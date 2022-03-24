@@ -25,7 +25,6 @@ export type AssociationsState = {
   accountPageOpened: Boolean,
   userIsLoggingIn: Boolean
   userName:string,
-  taxExoneration:number,
   donations:{name:string, donationNumber:number}[]
 }
 
@@ -42,10 +41,10 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
       {id:1, name: 'Evangile et vie', description: 'Travailler a la propagation des textes de l écriture sainte et des doctrines qu elle contient'},
       {id:2, name: 'Etoile sportive française', description: 'Pratique des sports en general ainsi que la préparation militaire des jeunes gens'},
       {id:3, name: 'Association sportive de la villa des otages', description: 'Création d une section judo et disciplines associées'},
-      {id:4, name: 'ccccc', description: 'description2'},
-      {id:5, name: 'nanmaisnannanmains', description: 'description3'},
-      {id:6, name: 'ccccc', description: 'description2'},
-      {id:7, name: 'nanmaisnanmaisndsfins', description: 'description3'}
+      {id:4, name: 'Centre d’étude et d’action sociales de Paris CEAS de Paris.', description: 'Ètude des problèmes familiaux sociaux susciter toute action ayant le souci du progrès social.'},
+      {id:5, name: 'Evangile et vie', description: 'Travailler a la propagation des textes de l écriture sainte et des doctrines qu elle contient'},
+      {id:6, name: 'Etoile sportive française', description: 'Pratique des sports en general ainsi que la préparation militaire des jeunes gens'},
+      {id:7, name: 'Association sportive de la villa des otages', description: 'Création d une section judo et disciplines associées'},
     ],
     associationSelected: {
       id: -1,
@@ -54,19 +53,19 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
     },
     accountPageOpened: false,
     userIsLoggingIn: false,
-    userName:'HugBarbier',
-    taxExoneration:1000,
+    userName:'email@exemple.test',
+    taxExoneration:0,
     donations:[
-      {name:'associationnum1', donationNumber:1300},
-      {name:'associationnum2', donationNumber:1300},
-      {name:'associationnum1', donationNumber:1300},
-      {name:'associationnum2', donationNumber:1300},
-      {name:'associationnum1', donationNumber:1300},
-      {name:'associationnum2', donationNumber:1300},
-      {name:'associationnum1', donationNumber:1300},
-      {name:'associationnum2', donationNumber:1300},
-      {name:'associationnum1', donationNumber:1300},
-      {name:'associationnum2', donationNumber:1300},
+      {name:'associationnum1', donationNumber:100},
+      {name:'associationnum2', donationNumber:100},
+      {name:'associationnum1', donationNumber:100},
+      {name:'associationnum2', donationNumber:100},
+      {name:'associationnum1', donationNumber:100},
+      {name:'associationnum2', donationNumber:100},
+      {name:'associationnum1', donationNumber:100},
+      {name:'associationnum2', donationNumber:100},
+      {name:'associationnum1', donationNumber:100},
+      {name:'associationnum2', donationNumber:100},
     ]
   }
 
@@ -156,7 +155,7 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
         
         <div> 
           <Nav handleAccountPageOpened={this.handleAccountPageOpened} handleLogin={this.handleLogin} handleHomepage={this.handleHomepage}/>
-          <Myaccount userName={this.state.userName} taxExoneration={this.state.taxExoneration} donations={this.state.donations} />
+          <Myaccount userName={this.state.userName} donations={this.state.donations} />
         </div>
       )                 
     } else if(this.state.associationSelected.id==-1 && this.state.accountPageOpened == false && this.state.userIsLoggingIn == false)

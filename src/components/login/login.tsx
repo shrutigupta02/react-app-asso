@@ -55,7 +55,7 @@ export default class Login extends React.Component<loginProps,loginState>{
   }
 
   render() {
-    // if(this.state.isCreatingAccount == false){
+    if(this.state.isCreatingAccount == false){
       return (
         <div className="loginPage">
           <form action="" method="get" className='loginContainer' onSubmit={this.handleFormSubmit}>
@@ -67,19 +67,18 @@ export default class Login extends React.Component<loginProps,loginState>{
           </form>
         </div>
       )
-    // } 
-    // else {
-    //   return (
-    //     <div className="loginPage">
-    //       <form action="" method="get" className='loginContainer' onSubmit={this.handleFormSubmit}>
-    //         <input type="email" name='email' id='email' placeholder='email' className='loginInput' onChange={event => this.handleUsername(event.target.value)}></input> 
-    //         <input type="password" name='password' id='password' placeholder='mot de passe' className='loginInput' onChange={event => this.handlePassword(event.target.value)}/>
-    //         <input type="submit" value='créer un compte' className='loginInput confirmInput'/>
-    //         <div></div>
-    //         <p onClick={() => this.handleIsCreatingAccount() }>se connecter</p>
-    //       </form>
-    //     </div>
-    //   )
-    // }
+    } else {
+      return (
+        <div className="loginPage">
+          <form action="" method="get" className='loginContainer' onSubmit={this.handleFormSubmit}>
+            <input type="email" name='email' id='email' placeholder='email' className='loginInput' onChange={event => this.handleUsername(event.target.value)}></input> 
+            <input type="password" name='password' id='password' placeholder='mot de passe' className='loginInput' onChange={event => this.handlePassword(event.target.value)}/>
+            <input type="submit" value='créer un compte' className='loginInput confirmInput'/>
+            <div></div>
+            <p onClick={() => this.handleIsCreatingAccount() }>se connecter</p>
+          </form>
+        </div>
+      )
+    }
   }
 }
