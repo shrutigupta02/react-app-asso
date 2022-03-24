@@ -37,7 +37,7 @@ export default class Donationpage extends React.Component<association, {}>{
             </div>
             <Converter/>
             <div className='donation_button_section'>
-              <button type='button' className='give_donation'>Donner sur le site</button>
+              <button type='button' className='give_donation'>Aller sur le site</button>
             </div>
           </div>
           <div className='how_to'>
