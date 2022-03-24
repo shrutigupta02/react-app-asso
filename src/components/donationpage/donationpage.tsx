@@ -21,8 +21,8 @@ export default class Donationpage extends React.Component<association, {}>{
       <div className='donationPage'> 
 
           <Link className='quit' to="/" onClick={() => {this.props.quitPage()}}>retour</Link>
-          <h1 className='association_name'>nom : {this.props.association.name}</h1>
-          <p className='association_description'>description : {this.props.association.description}</p>
+          <h1 className='association_name'>{this.props.association.name}</h1>
+          <p className='association_description'>{this.props.association.description}</p>
           <p className='title_converter'>Rentrez votre don pour voir quelle somme va pouvoir être déduite de vos impôts </p>
           <div className='container_converter'>
             <div className='location'>
