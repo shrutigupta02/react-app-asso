@@ -45,11 +45,10 @@
 }
 
 .location{
-    width: 270px;
+    width: 320px;
     height: 210px;
     display: flex;
     align-items: center;
-    flex-direction: column;
     justify-content: center;
     background-color: rgb(250, 252, 255);
     border-radius: 20px;
