@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Converter from '../converter/converter'
 import './donationpage.css'
 import location_logo from '../../img/location_logo.png'
+import back_arrow from '../../img/back_arrow.png'
 
 
 export type association = {
@@ -20,10 +21,15 @@ export default class Donationpage extends React.Component<association, {}>{
   render() {
     return (
       <div className='donationPage'> 
-
-          <Link className='quit' to="/" onClick={() => {this.props.quitPage()}}>retour</Link>
-          <h1 className='association_name'>{this.props.association.name}</h1>
-          <p className='association_description'>{this.props.association.description}</p>
+          <div className='header_association'>
+            <h1 className='association_name'>{this.props.association.name}</h1>
+            <Link className='quit' to="/" onClick={() => {this.props.quitPage()}}>
+              <img src={back_arrow} alt="retour en arrière button" />
+            </Link>
+          </div>
+          <div className='description_container'>
+            <p className='association_description'>{this.props.association.description}</p>
+          </div>
           <p className='title_converter'>Rentrez votre don pour voir quelle somme va pouvoir être déduite de vos impôts </p>
           <div className='container_converter'>
             <div className='location'>
@@ -32,7 +38,7 @@ export default class Donationpage extends React.Component<association, {}>{
             </div>
             <Converter userName={this.props.userName} assoName={this.props.association.name}/>
             <div className='donation_button_section'>
-              <button type='button' className='give_donation'>Donner sur le site</button>
+              <button type='button' className='give_donation'>Aller sur le site</button>
             </div>
           </div>
           <div className='how_to'>

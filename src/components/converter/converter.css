@@ -15,8 +15,9 @@
     height: 37.36px;
     text-align: center;
     font-size: 15px;
-    margin: 32px;
-    border-radius: 4px;
+    margin: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
 }
 
 input::placeholder{
@@ -36,8 +37,9 @@ input::placeholder{
 }
 
 .save_donation{
-    width: 172px;
+    width: 190px;
     height: 31.95px;
+    font-family: 'Marianne';
     background-color: rgba(0, 47, 117, 1);
     color: rgba(255, 255, 255, 1);
     border: none;
