@@ -14,6 +14,7 @@ export type association = {
     }
     handleAssociation: Function,
     quitPage: Function
+    userName:string
   }
 
 export default class Donationpage extends React.Component<association, {}>{
@@ -35,7 +36,7 @@ export default class Donationpage extends React.Component<association, {}>{
               <img src={location_logo} alt="logo localisation" />
               <p className='adresse'>3 rue de Metz 75010 Paris</p>
             </div>
-            <Converter/>
+            <Converter userName={this.props.userName} assoName={this.props.association.name}/>
             <div className='donation_button_section'>
               <button type='button' className='give_donation'>Aller sur le site</button>
             </div>
