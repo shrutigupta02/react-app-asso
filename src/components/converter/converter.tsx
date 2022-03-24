@@ -1,11 +1,14 @@
 import React, { Component, useState } from 'react'
 import './converter.css'
+import { postNewDonation } from '../../api'
 
 
+export type ConverterProps = {
+  userName:string, 
+  assoName:string,
+}
 
-
-
- export default function Converter(){
+ export default function Converter(props:ConverterProps){
 
     const [changeNumber, setChangeNumber] = useState('')
 
@@ -19,7 +22,7 @@ import './converter.css'
           <label className="deduction_title" htmlFor="">Déduction</label>
           <input className="deduction_input"type="number" value={parseInt(changeNumber)*0.75} disabled/> 
         </div>
-        <button type='button' className='save_donation'>Enregistrer dans mes dons</button>
+        <button type='button' className='save_donation' onClick={() => postNewDonation(parseInt(changeNumber), props.userName, props.assoName)}>Enregistrer dans mes dons</button>
       </div>
     )
 }
