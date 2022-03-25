@@ -22,6 +22,7 @@ export default class Login extends React.Component<loginProps,loginState>{
   }
 
 
+  // function to change the state to render the code for creating an accountand to send the user informations to the server.
   handleIsCreatingAccount = () => {
     let isCreatingAccount = !this.state.isCreatingAccount
     this.setState({isCreatingAccount})
@@ -29,6 +30,7 @@ export default class Login extends React.Component<loginProps,loginState>{
     postNewUser(this.state.userName, this.state.userPassword)
   }
 
+  // function to change the username in the state
   handleUsername = (user:string) => {
     
     let userName = user
@@ -38,6 +40,7 @@ export default class Login extends React.Component<loginProps,loginState>{
     this.setState({isCreatingAccount, userName, userPassword})
   }
 
+  // function to change the password in the state
   handlePassword = (password:string) => {
     let userName = this.state.userName
     let isCreatingAccount = this.state.isCreatingAccount
@@ -46,6 +49,7 @@ export default class Login extends React.Component<loginProps,loginState>{
     this.setState({isCreatingAccount, userName, userPassword})
   }
 
+  // 
   handleFormSubmit = (event:React.FormEvent<HTMLFormElement>) => {
     this.props.handleUser(this.state.userName)
     event.preventDefault();

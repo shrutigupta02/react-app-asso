@@ -1,6 +1,6 @@
 import axios from "axios"
 
-// login and create an account
+// function to login or create an account with the server
 export const postNewUser = (login:string, password:string) => {
   
     const axios = require('axios').default;
@@ -20,7 +20,7 @@ export const postNewUser = (login:string, password:string) => {
 
 }
 
-// to give a new donation to the server
+// function to give a new donation to the server
 export const postNewDonation = (donationNumber:number, associationName:string, userName:string) => {
   
     const axios = require('axios').default;
@@ -41,8 +41,8 @@ export const postNewDonation = (donationNumber:number, associationName:string, u
 
 }
 
+// function to get all the associations from the server
 export const getAllAssociations = () => {
-    // mettre la bonne url
     axios.get('https://h3-proxy.services.quickpipes.io/team9/getAllAssos')
         .then(function (response:any) {
         // handle success
@@ -58,9 +58,10 @@ export const getAllAssociations = () => {
     });
 }
 
-export const getAllDonations = () => {
+// function to get all the donations of the user from the server
+export const getAllDonations = (user:string) => {
     // mettre la bonne url
-    axios.get('https://h3-proxy.services.quickpipes.io/team9/user1donations')
+    axios.get('https://h3-proxy.services.quickpipes.io/team9/'+{user}+'/donations')
         .then(function (response:any) {
         // handle success
         return 'c est réussi !!!'

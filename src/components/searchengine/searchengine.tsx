@@ -13,6 +13,7 @@ export type associations = {
 }
 
 export default function Searchengine(props: associations) {
+  // getting all the associations from the server
   getAllAssociations()
   const [searchTerm, setSearchTerm] = useState('')
   

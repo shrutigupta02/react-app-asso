@@ -15,6 +15,7 @@ export default function Myaccount(state: AccountState) {
   const [newDonationNumber, setNewDonationNumber] = useState('')
   const [newDonationName, setNewDonationName] = useState('')
 
+  // calculating the tax exoneration total number from the users donations
   let taxExonerationNumber:number = 0
 
   for( let i=0; i<state.donations.length; i++){
@@ -42,7 +43,9 @@ export default function Myaccount(state: AccountState) {
         </div>
         <div className='history'>
           <h3>Historique des dons</h3>
+          {/* TO DO : gett all the donations from the user :  */}
           {/* getAllDonations() */}
+          {/* rendering all the donations : */}
           {state.donations.map((pres) => {
             return <div><p className='donationName'>{pres.name}</p><p className='donationDescription'>{pres.donationNumber}</p></div>
           })}
