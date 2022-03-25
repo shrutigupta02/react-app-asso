@@ -20,7 +20,11 @@ export default function Myaccount(state: AccountState) {
   for( let i=0; i<state.donations.length; i++){
     taxExonerationNumber = taxExonerationNumber + state.donations[i].donationNumber 
   }
-  taxExonerationNumber = taxExonerationNumber * 0.75
+  if(taxExonerationNumber <= 1000)
+    taxExonerationNumber = taxExonerationNumber * 0.66
+  else 
+    taxExonerationNumber = taxExonerationNumber * 0.75
+
   
 
 
@@ -55,7 +59,7 @@ export default function Myaccount(state: AccountState) {
           <div></div>
           <div className='taxExoneration'>
             <p className='taxExonerationTitle'>Déduction d’impôts sur la periode </p>
-            <p className='taxExonerationNumber'>{taxExonerationNumber}€</p>
+            <p className='taxExonerationNumber'>{Math.round(taxExonerationNumber)}€</p>
           </div>
         </div>
         {/* {newDonationNumber}{newDonationName} */}

@@ -57,7 +57,7 @@ export default class Homepage extends React.Component<{}, AssociationsState>{
     taxExoneration:0,
     donations:[
       {name:'associationnum1', donationNumber:100},
-      {name:'associationnum2', donationNumber:100},
+      {name:'associationnum2', donationNumber:1010},
       {name:'associationnum1', donationNumber:100},
       {name:'associationnum2', donationNumber:100},
       {name:'associationnum1', donationNumber:100},
