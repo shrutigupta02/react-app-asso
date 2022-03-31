@@ -4,6 +4,11 @@ It also offers to manage its donations by displaying a history of donations and 
 
 It is developed in React Typescript 
 
+
+you can see the demo of the website here : https://1don1pot.netlify.app/ 
+
+
+
 In the project directory, you can run:
 
 npm start
