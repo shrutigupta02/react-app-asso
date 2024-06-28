@@ -16,10 +16,10 @@ export default class Nav extends React.Component<NavProps, {}>{
   render() {
       return (
         <div className='navbar'>    
-            <Link to="/" onClick={() => this.props.handleAccountPageOpened()} className='accountButton'>Mon Compte</Link>
-            <Link to="/" onClick={() => this.props.handleLogin()} className='connexionButton'>se connecter</Link>
-            <Link to="/" onClick={() => {this.props.handleHomepage()}} className='homepageButton'>Accueil</Link>          
-            <img src={logo} alt='1don1po logo marque site' onClick={() => {this.props.handleHomepage()}}></img>
+            <Link to="/" onClick={() => this.props.handleAccountPageOpened()} className='accountButton'>My Account</Link>
+            <Link to="/" onClick={() => this.props.handleLogin()} className='connexionButton'>Log In</Link>
+            <Link to="/" onClick={() => {this.props.handleHomepage()}} className='homepageButton'>Welcome</Link>          
+            <img src={logo} onClick={() => {this.props.handleHomepage()}}></img>
         </div>
       )
   }
